@@ -12,10 +12,10 @@ export default function Navbar(props) {
     const isDarkMode = useContext(ThemeContext);
     console.log(isDarkMode + "darkmode?");
 
-
+// bg-base-300
     return (
 
-        <div className="bg-base-300 ">
+        <div>
 
             {/* 
             Before active style
@@ -32,7 +32,8 @@ export default function Navbar(props) {
             </ul>
              */}
 
-            <nav className=" container mx-auto mt-10  w-80 p-3 shadow-xl bg-neutral card gap-4 flex-row justify-space-between ">
+            <nav>
+            {/* className=" container mx-auto mt-10  w-80 p-3 shadow-xl bg-neutral card gap-4 flex-row justify-space-between " */}
                 
                 {/* <input type="checkbox" className="toggle" defaultChecked={isDarkMode} onChange={() => props.setIsDarkMode(!isDarkMode)} /> */}
                 {/* <label className="swap swap-rotate"> */}

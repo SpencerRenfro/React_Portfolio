@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: auto;
 }
 
 .spinner{
@@ -123,6 +124,27 @@ ul li.active{
   background-size: cover;
  }
 
+ .bluebox {
+  background-color: steelblue;
+  border: solid 10px steelblue;
+  display: flex;
+ }
+
+
+ .topBox{
+  background-color: tomato;
+  border: solid 10px tomato;
+ }
+
+ .bottombox{
+  background-color: tomato;
+  border: solid 10px tomato;
+
+ }
+
+ .boxTitle{
+  color: white;
+ }
  /* .profile-card{
   width: 700px;
   height:600px;

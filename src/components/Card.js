@@ -30,7 +30,7 @@ export default function Card() {
         <div className="">
 
             <div className="
-            card bg-neutral  shadow-xl mx-16 mt-10 p-0 
+            card bg-neutral  shadow-xl p-0 
            
             xl:fixed profile-card
             ">

@@ -21,47 +21,48 @@ import JSPreview from "./components/JSPreview";
 
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  // const [isDarkMode, setIsDarkMode] = useState(true);
 
-  useEffect(() => {
-    document
-      .querySelector("html")
-      .setAttribute("data-theme", `${isDarkMode ? "dark" : "light"}`);
-  }, [isDarkMode]);
+  // useEffect(() => {
+  //   document
+  //     .querySelector("html")
+  //     .setAttribute("data-theme", `${isDarkMode ? "dark" : "light"}`);
+  // }, [isDarkMode]);
 
   // fetch request
 
-  const onButtonClick = () => {
+  // const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch("Resume.pdf").then((response) => {
-      response.blob().then((blob) => {
+    // fetch("Resume.pdf").then((response) => {
+    //   response.blob().then((blob) => {
         // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
+        // const fileURL = window.URL.createObjectURL(blob);
         // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "Resume.pdf";
-        alink.click();
-      });
-    });
-  };
+  //       let alink = document.createElement("a");
+  //       alink.href = fileURL;
+  //       alink.download = "Resume.pdf";
+  //       alink.click();
+  //     });
+  //   });
+  // };
 
   // end
 
   return (
-    <div className="bg-base-300 grid  md:grid-cols-1">
-      {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
-          FOR EDITING THEME COLOR */}
-      <div className=" flex justify-center bg-base-300">
-        {/* className="sm:grid grid-rows-3" */}
-        <Navbar />
-      </div>
-      <div className="grid  md:grid-cols-2 xl:grid-cols-2 bg-base-300">
-        <Card />
 
-          <div>
-            <div className="pr-8">
-        <Routes>
+
+    <div className="container mx-auto py-12">
+        <div className="  grid grid-cols-12 lg:grid-cols-10 gap-24">
+        {/* bluebox */}
+          <div className="   col-span-12 md:col-span-5 lg:col-span-3">
+            {/* <h1>BoxTop</h1> */}
+            {/* topBox boxTitle  */}
+            <Card />
+          </div>
+          <div className="  col-span-12 md:col-span-7 lg:col-span-7">
+            {/* <h1>BoxBottom</h1>  */}
+            {/* bottombox boxTitle */}
+            <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="resume" element={<Resume />} />
           <Route path="works" element={<Works />}>
@@ -72,10 +73,53 @@ function App() {
             <Route path="projecttwo" element={<ProjectTwo />} />
             <Route path="projectthree" element={<Project3 />} />
           </Route>
-        </Routes>
+        </Routes> 
+
+          </div>
         </div>
+  
+    
+
+
+
+
+
+
+    
+    {/* <div className="bg-base-300 grid  md:grid-cols-1"> */}
+  
+      {/* <div  className="dark:bg-black dark:text-white dark:bg-none">
+          FOR EDITING THEME COLOR */}
+
+      
+
+      {/**div className=" flex justify-center bg-base-300"> */}
+                    {/* className="sm:grid grid-rows-3" */}
+        {/* <Navbar /> */}
+      {/* </div> */}
+      
+      {/* <div className="bluebox grid  md:grid-cols-2 xl:grid-cols-2 bg-base-300"> */}
+        {/* <Card /> */}
+
+          {/* <div>
+            <div> */}
+
+        {/* <Routes>
+          <Route path="/" element={<AboutMe />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="works" element={<Works />}>
+            <Route path="polytopia" element={<Polytopia />} />
+            <Route path="polytopia/react-preview" element={<ReactPreview />} />
+            <Route path="polytopia/c-preview" element={<CPreview />} />
+            <Route path="polytopia/javascript-preview" element={<JSPreview />} />
+            <Route path="projecttwo" element={<ProjectTwo />} />
+            <Route path="projectthree" element={<Project3 />} />
+          </Route>
+        </Routes> */}
+
+        {/* </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );

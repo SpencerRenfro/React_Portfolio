@@ -15,16 +15,11 @@
   <!-- <script src="../src/components/About.js"></script> -->
   <!-- // On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
   <script>
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
-} else {
-  document.documentElement.classList.remove('dark')
-}
 </script>
 </head>
 
-<body class="bg-base-300">
-  <div id="root" className="bg-base-300">
+<body>
+  <div id="root">
 
   </div>
 
